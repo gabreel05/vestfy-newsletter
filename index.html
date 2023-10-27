@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Newsletter | Vestfy</title>
+  </head>
+  <body>
+    <h1>Quer saber mais?</h1>
+    <h2>
+      Deixe seu e-mail para enviarmos as novidades conforme elas forem surgindo.
+    </h2>
+
+    <input type="email" name="email" id="email" />
+    <button type="button" onclick="sendEmail()">Enviar</button>
+  </body>
+  <script>
+    const emails = [];
+
+    function sendEmail() {
+      const email = document.querySelector("input").value;
+
+      emails.push(email);
+
+      console.table(emails);
+    }
+  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px auto;
+      max-width: 600px;
+      padding: 0 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    h2 {
+      color: #555;
+    }
+
+    input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    @media screen and (max-width: 500px) {
+      input[type="email"] {
+        margin: 10px auto;
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</html>
